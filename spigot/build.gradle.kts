@@ -6,7 +6,7 @@ buildscript {
 
 plugins {
     id("maven-publish")
-    id("com.github.johnrengelman.shadow") version "8.1.0"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
     id("net.kyori.blossom") version "1.3.1"
 }
 
@@ -36,10 +36,10 @@ dependencies {
     implementation(project(":common"))
 
     // Spigot
-    compileOnly("org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT")
 
     // bStats
-    api("org.bstats:bstats-bukkit:3.0.1")
+    api("org.bstats:bstats-bukkit:3.0.2")
 
     // Dependencies
     implementation("de.tr7zw:item-nbt-api:$nbtApiVersion")
@@ -49,7 +49,7 @@ dependencies {
     implementation("com.github.TownyAdvanced:Towny:$townyVersion")
     implementation("me.clip:placeholderapi:$papiVersion")
     implementation("com.sk89q.worldguard:worldguard-bukkit:$worldGuardVersion")
-    implementation("com.github.angeschossen:LandsAPI:6.0.2")
+    implementation("com.github.angeschossen:LandsAPI:6.28.11")
 }
 
 blossom {
