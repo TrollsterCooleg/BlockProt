@@ -66,6 +66,7 @@ public class InteractEventListener implements Listener {
                     event.setCancelled(true);
                     sendMessage(player, Translator.get(TranslationKey.MESSAGES__NO_PERMISSION));
                 } else if (!(new PlayerSettingsHandler(player).hasPlayerInteractedWithMenu())) {
+                    if (!BlockProt.getDefaultConfig().getHintsEnabled()) {return;}
                     Long timestamp = LockHintMessageCooldown.getTimestamp(player);
                     if (timestamp == null || timestamp < System.currentTimeMillis() - (BlockProt.getDefaultConfig().getLockHintCooldown() * 1000)) { // 10 seconds in milliseconds
                         // If they can access the block we'll notify them that they could

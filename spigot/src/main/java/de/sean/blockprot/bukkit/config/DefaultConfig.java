@@ -278,6 +278,16 @@ public final class DefaultConfig extends BlockProtConfig {
         }
     }
 
+    /**
+     * Gets if new players should receive the hint message.
+     */
+    public boolean getHintsEnabled() {
+        if (!config.contains("lock_hint_enabled")) {
+            return true;
+        }
+        return config.getBoolean("lock_hint_enabled");
+    }
+
     public long getLockHintCooldown() {
         if (!config.contains("lock_hint_cooldown_in_seconds")) {
             return 10;

@@ -48,6 +48,10 @@ lock_on_place_by_default: true
 # no limit.
 player_max_locked_block_count: -1
 
+## If the hint displayed when opening chests should be shown.
+## Set to false if you want to completely remove the hint for everyone.
+lock_hint_enabled: true
+
 # The cooldown between messages hinting players that they can
 # protect their blocks.
 lock_hint_cooldown_in_seconds: 10
